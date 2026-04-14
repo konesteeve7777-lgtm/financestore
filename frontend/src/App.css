@@ -1,0 +1,266 @@
+﻿/* 🌍 GLOBAL */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f6f9;
+}
+
+/* 📦 CONTAINER */
+.container {
+    padding: 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* 🧱 CARD */
+.card {
+    background: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease;
+}
+
+    .card:hover {
+        transform: translateY(-3px);
+    }
+
+/* 🏷️ TITRES */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+h2 {
+    margin-bottom: 15px;
+    color: #444;
+}
+
+/* 📊 DASHBOARD STATS */
+.stats {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.stat-box {
+    flex: 1;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+.income {
+    background: #28a745;
+}
+
+.expense {
+    background: #dc3545;
+}
+
+.sales {
+    background: #007bff;
+}
+
+.balance {
+    background: #6f42c1;
+}
+
+/* 🆕 COULEURS INTELLIGENTES */
+.positive {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.negative {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+.warning {
+    color: #ffc107;
+    font-weight: bold;
+}
+
+/* 🚨 ALERTES */
+.alert {
+    background: #ffe5e5;
+    color: #dc3545;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+/* 💡 RECOMMANDATIONS */
+.recommendation {
+    background: #e7f3ff;
+    color: #007bff;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 8px;
+}
+
+/* 📋 TABLE */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+    .table th {
+        background: #007bff;
+        color: white;
+        padding: 12px;
+        text-align: center;
+    }
+
+    .table td {
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+        text-align: center;
+    }
+
+    .table tr:hover {
+        background: #f1f1f1;
+    }
+
+/* 🔘 BOUTONS */
+button {
+    padding: 6px 10px;
+    margin: 2px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+    button:hover {
+        opacity: 0.85;
+        transform: scale(1.05);
+    }
+
+    /* couleurs boutons */
+    button.edit {
+        background: #ffc107;
+        color: black;
+    }
+
+    button.delete {
+        background: #dc3545;
+        color: white;
+    }
+
+    button.save {
+        background: #28a745;
+        color: white;
+    }
+
+    button.cancel {
+        background: #6c757d;
+        color: white;
+    }
+
+/* 📝 FORMULAIRE */
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+    form input,
+    form select {
+        padding: 8px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        min-width: 150px;
+    }
+
+    form button {
+        background: #007bff;
+        color: white;
+    }
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #007bff;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+    .navbar h1 {
+        color: white;
+        margin: 0;
+    }
+
+    .navbar a {
+        color: white;
+        margin-left: 15px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+/* 📱 RESPONSIVE */
+@media (max-width: 768px) {
+
+    .container {
+        padding: 10px;
+    }
+
+    .card {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    .stats {
+        flex-direction: column;
+    }
+
+    .stat-box {
+        margin: 5px 0;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    form {
+        flex-direction: column;
+    }
+
+    input,
+    select,
+    button {
+        width: 100%;
+    }
+}
+
+/* 📱 MOBILE PETIT */
+@media (max-width: 480px) {
+
+    h1 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    .table th,
+    .table td {
+        padding: 6px;
+        font-size: 11px;
+    }
+}
