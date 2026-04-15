@@ -27,7 +27,7 @@ function AddTransaction() {
             return;
         }
 
-        axios.post("http://127.0.0.1:8000/api/transactions/", form, {
+        axios.post("https://financestore-backend.onrender.com/api/transactions/", form, {
             headers: {
                 Authorization: `Token ${token}`
             }

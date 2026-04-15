@@ -13,7 +13,7 @@ function DebtList() {
             return;
         }
 
-        axios.get("http://127.0.0.1:8000/api/debts/", {
+        axios.get("https://financestore-backend.onrender.com/api/debts/", {
             headers: { Authorization: `Token ${token}` }
         })
             .then(res => {

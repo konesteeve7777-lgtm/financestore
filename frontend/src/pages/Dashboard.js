@@ -13,7 +13,7 @@ function Dashboard() {
         // 🔐 récupérer token
         const token = localStorage.getItem("token");
 
-        axios.get("http://127.0.0.1:8000/api/dashboard/", {
+        axios.get("https://financestore-backend.onrender.com/api/dashboard/", {
             headers: {
                 Authorization: `Token ${token}`
             }

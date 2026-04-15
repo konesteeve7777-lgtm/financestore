@@ -7,7 +7,7 @@ function Register({ setAuth }) {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        axios.post("http://127.0.0.1:8000/api/register/", form)
+        axios.post("https://financestore-backend.onrender.com/api/register/", form)
             .then(res => {
                 localStorage.setItem("token", res.data.token);
                 setAuth(true);
