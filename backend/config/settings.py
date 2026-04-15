@@ -6,6 +6,7 @@ import MySQLdb
 MySQLdb.__version__ = "2.2.1"
 
 from pathlib import Path
+import os
 
 
 # Build paths
@@ -62,6 +63,11 @@ MIDDLEWARE = [
 
 CORS_ALLOW_ALL_ORIGINS = True
 
+# 🔥 AJOUT IMPORTANT POUR LOGIN / CSRF SUR REACT + RENDER
+CSRF_TRUSTED_ORIGINS = [
+    "https://financestore.onrender.com"
+]
+
 
 # URLS
 ROOT_URLCONF = 'config.urls'
@@ -86,15 +92,15 @@ TEMPLATES = [
 WSGI_APPLICATION = 'config.wsgi.application'
 
 
-# DATABASE MYSQL
+# DATABASE MYSQL (Railway)
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'storefinance',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': '127.0.0.1',
-        'PORT': '3306',
+        'NAME': os.environ.get('DB_NAME', 'storefinance'),
+        'USER': os.environ.get('DB_USER', 'root'),
+        'PASSWORD': os.environ.get('DB_PASSWORD', ''),
+        'HOST': os.environ.get('DB_HOST', '127.0.0.1'),
+        'PORT': os.environ.get('DB_PORT', '3306'),
         'OPTIONS': {
             'charset': 'utf8mb4',
         }
@@ -128,3 +134,4 @@ USE_TZ = True
 
 # STATIC
 STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
